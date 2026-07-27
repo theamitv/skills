@@ -1,0 +1,41 @@
+# GitHub PR Intelligence
+
+> Enterprise PR review — architecture, security, performance, testing, and deployment risk analysis.
+
+Review Pull Requests like a Staff Engineer. 12-phase pipeline: architecture, security, performance, reliability, scalability, code quality, testing, and deployment risk.
+
+## What It Does
+
+- **12-Phase Review Pipeline** — Context → Categorize → Dependencies → Architecture → Security → Performance → Reliability → Scalability → Code Quality → Testing → Deployment → Summary
+- **Evidence-Based** — Every finding cites specific files and line numbers
+- **Severity Scoring** — Critical/High/Medium/Low/Suggestion with business and technical impact
+- **HTML Dashboard** — Dark mode, charts, issue cards, heat maps
+- **Merge Recommendation** — Go/no-go with overall score (0-100)
+
+## Quick Start
+
+```bash
+# Install
+npx skills add theamitv/github-pr-intelligence
+
+# Use in Claude Code
+/github-pr-intelligence Review PR #124
+```
+
+## Structure
+
+```
+github-pr-intelligence/
+├── SKILL.md          # Skill metadata and triggers
+├── README.md         # This file
+├── references/
+│   └── review-dimensions.md  # Severity levels, checklists
+├── examples/
+│   └── usage.md      # Usage examples
+└── scripts/
+    └── review.sh     # PR data fetcher
+```
+
+## License
+
+MIT
