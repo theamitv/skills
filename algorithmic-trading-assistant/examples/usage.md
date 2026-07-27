@@ -37,3 +37,12 @@ Generate deployment checklist
 Review broker integration
 Generate HTML dashboard
 ```
+
+## Example Files
+
+| File | Description |
+|------|-------------|
+| `nifty-momentum-swing.py` | Complete backtest engine for Nifty 50 swing strategy |
+| `paper-trading-plan.md` | 3-phase paper trading plan with journal template |
+| `deployment-checklist.md` | Full deployment checklist from soft launch to go-live |
+| `risk-report.md` | Scenario analysis, stress tests, and risk controls |
