@@ -1,6 +1,6 @@
 # AI-Powered Development Skills for Claude Code
 
-A collection of 11 specialized skills for Claude Code covering trading, API governance, cloud cost optimization, codebase analysis, database performance, system design, PR review, incident investigation, SaaS blueprinting, SaaS code generation, and security compliance.
+A collection of 12 specialized skills for Claude Code covering trading, API governance, cloud cost optimization, codebase analysis, database performance, system design, PR review, incident investigation, project updates, SaaS blueprinting, SaaS code generation, and security compliance.
 
 ## Skills
 
@@ -13,6 +13,7 @@ A collection of 11 specialized skills for Claude Code covering trading, API gove
 | [database-performance-optimizer](./database-performance-optimizer/) | Database performance — schema review, query optimization, indexing |
 | [enterprise-system-design](./enterprise-system-design/) | System design — HLD, LLD, capacity planning, FAANG interview prep |
 | [github-pr-intelligence](./github-pr-intelligence/) | PR review — architecture, security, performance, testing, deployment risk |
+| [monthly-project-update](./monthly-project-update/) | Project status reports — git/PR/ticket mining, categorized summaries, stakeholder-ready markdown |
 | [production-incident-investigator](./production-incident-investigator/) | SRE incident investigation — RCA, timeline, postmortem, remediation |
 | [saas-product-generator](./saas-product-generator/) | SaaS blueprint — from idea to PRD, architecture, marketing, financials |
 | [saas-code-generator](./saas-code-generator/) | SaaS code generator — from blueprint to working full-stack application |
@@ -52,6 +53,7 @@ skills/
 ├── database-performance-optimizer/
 ├── enterprise-system-design/
 ├── github-pr-intelligence/
+├── monthly-project-update/
 ├── production-incident-investigator/
 ├── saas-product-generator/
 ├── saas-code-generator/
