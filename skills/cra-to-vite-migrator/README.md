@@ -21,6 +21,14 @@ npx skills add theamitv/skills --skill cra-to-vite-migrator
 /cra-to-vite-migrator Migrate this CRA project to Vite
 ```
 
+## When It Won't Work
+
+- **No CRA project** — Designed specifically for Create React App projects. Other React setups (Next.js, Remix, Gatsby) need different migration paths.
+- **Custom react-scripts eject** — Heavily customized ejected CRA configs may need manual adjustments beyond the standard migration.
+- **Module Federation** — CRA projects using Module Federation need additional configuration for Vite's module federation plugin.
+- **Legacy browser support** — Vite targets modern browsers by default. If you need IE11 support, additional polyfill configuration is required.
+- **Production parity** — Dev server behavior may differ slightly from CRA. Always verify production build output.
+
 ## Structure
 
 ```

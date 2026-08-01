@@ -40,6 +40,14 @@ Migrate CRA to Vite and move tests to Vitest
 
 The skill will install Vitest, configure it in `vite.config.js`, and update test imports.
 
+## TypeScript & Absolute Imports
+
+```
+Migrate CRA to Vite with TypeScript and @/ imports
+```
+
+The skill will configure `resolve.alias` and `tsconfig.json` paths for absolute imports.
+
 ## Example Migration Output
 
 ### Phase 1 — Risk Summary
