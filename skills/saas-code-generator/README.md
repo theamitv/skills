@@ -13,21 +13,6 @@ Transform a product blueprint into a complete, working application. This skill i
 - **Production-Ready** — Generates tests, Docker config, CI/CD pipelines, and environment templates
 - **Layer-Specific** — Generate only what you need: frontend, backend, database, or deployment
 
-## How It Complements saas-product-generator
-
-```
-saas-product-generator                    saas-code-generator
-─────────────────────                     ────────────────────
-Product Discovery    ──blueprint──►       Project Scaffold
-PRD & User Stories                        Database Schema & Migrations
-Architecture Design  ──spec──►            Backend API & Auth
-Feature Matrix                            Frontend Components & Pages
-Pricing & Financials                      Tests (unit, integration, e2e)
-Marketing & GTM                           Docker & CI/CD Config
-```
-
-Use them together: plan with `saas-product-generator`, build with `saas-code-generator`.
-
 ## Quick Start
 
 ```bash
@@ -39,6 +24,14 @@ npx skills add theamitv/saas-code-generator
 /saas-code-generator Build the app from my SaaS blueprint
 /saas-code-generator Generate a Next.js + FastAPI interview prep platform
 ```
+
+## When It Won't Work
+
+- **No blueprint** — Works best with a product blueprint from `saas-product-generator`. Without one, output quality depends on the specificity of your prompt.
+- **Complex migrations** — Generates greenfield applications. Migrating existing codebases or adding to large projects may need manual integration.
+- **Third-party API integrations** — Generates integration patterns but cannot register for third-party services or obtain API keys on your behalf.
+- **Production deployment** — Generates Docker and CI/CD config but does not deploy to production or manage cloud infrastructure.
+- **Custom UI/UX** — Generates functional UI with standard component libraries. Custom design systems and complex animations need manual styling.
 
 ## Supported Tech Stacks
 
