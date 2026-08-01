@@ -23,6 +23,15 @@ npx skills add theamitv/skills --skill monolith-boundary-finder
 /monolith-boundary-finder Find service boundaries in this monolith
 ```
 
+## When It Won't Work
+
+- **No monolith** — Designed for monolithic codebases. Microservices or greenfield projects don't need boundary analysis.
+- **No code access** — Requires access to source code and database schemas to analyze call graphs and data coupling.
+- **No database access** — Shared-table detection requires database schema access or migration files to analyze table ownership.
+- **Team structure unknown** — Conway's Law analysis needs team structure input. Without it, recommendations are code-only.
+- **One-pass extraction** — Boundary analysis is iterative. The first extraction candidate may reveal new coupling that changes the plan.
+- **Organizational change** — Identifies technical boundaries. Team restructuring and organizational changes are outside scope.
+
 ## Structure
 
 ```

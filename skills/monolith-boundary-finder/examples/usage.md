@@ -42,6 +42,14 @@ Our team structure doesn't match the code — how should we split?
 
 The skill will apply Conway's Law analysis to recommend boundaries that match team ownership.
 
+## Data Ownership
+
+```
+How do we split the shared database before extracting services?
+```
+
+The skill will analyze shared tables and recommend data ownership resolution strategies.
+
 ## Example Analysis Output
 
 ### Phase 1 — Call Graph Summary
