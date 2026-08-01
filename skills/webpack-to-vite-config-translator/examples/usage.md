@@ -42,6 +42,14 @@ We use require.context everywhere — how do we handle that in Vite?
 
 The skill will rewrite `require.context` calls to `import.meta.glob`.
 
+## Incremental Migration
+
+```
+Migrate our Webpack config to Vite incrementally
+```
+
+The skill will set up Vite alongside Webpack and migrate one loader at a time.
+
 ## Example Migration Output
 
 ### Phase 1 — Loader/Plugin Catalog

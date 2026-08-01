@@ -22,6 +22,14 @@ npx skills add theamitv/skills --skill webpack-to-vite-config-translator
 /webpack-to-vite-config-translator Translate this webpack.config.js to Vite
 ```
 
+## When It Won't Work
+
+- **No Webpack config** — Designed for migrating existing Webpack configurations. Greenfield Vite projects don't need this skill.
+- **Module Federation** — Vite's module federation support (`@originjs/vite-plugin-federation`) is less mature than Webpack 5's. Complex federation setups may need significant rework.
+- **Custom Webpack plugins** — Custom in-house Webpack plugins with no Vite equivalent need manual porting to Rollup plugin format.
+- **Legacy loaders** — Some older Webpack loaders (e.g., `coffee-loader`, `haml-loader`) have no Vite equivalent and need alternative approaches.
+- **Full behavioral parity** — Vite's dev server and build pipeline differ from Webpack's. Verify production build output matches expected behavior.
+
 ## Structure
 
 ```
