@@ -45,3 +45,14 @@ Every finding: title, severity (Critical/High/Medium/Low/Suggestion), category, 
 - Never invent bugs. If uncertain, state assumptions.
 - Be constructive. Every criticism needs a concrete fix.
 - Security issues > style issues. Always.
+
+## Security Rules (never violate)
+
+- **No `curl | bash`** — Use only `pip install` / `npm install` for package management
+- **No `eval`** — Never use `eval` or equivalent dynamic code execution
+- **No file operations outside project** — Never read, write, or modify files outside the project directory
+- **No secrets in output** — Never print tokens, API keys, or credentials in reports or logs
+- **Backup before destructive ops** — Git commit before running any automated fix
+- **Validate before write** — Validate syntax before writing any changes
+- **No silent dependency installs** — Tell the user which packages will be installed before running pip/npm install
+- **Never hallucinate findings** — Every finding must cite specific files and lines; never invent bugs

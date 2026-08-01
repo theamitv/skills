@@ -2,6 +2,7 @@
 # API Contract Auditor - Validation Script
 # Usage: ./validate.sh <openapi-spec-file>
 # Securely validates OpenAPI/Swagger spec files.
+# Safe: read-only, no file modifications. Input-validated, injection-safe.
 
 set -euo pipefail
 
@@ -13,15 +14,22 @@ usage() {
   exit 1
 }
 
-[ -z "$SPEC_FILE" ] && usage
+[ -n "$SPEC_FILE" ] || usage
 
-# Resolve to absolute path and validate it's within allowed directories
-SPEC_PATH="$(cd "$(dirname "$SPEC_FILE")" 2>/dev/null && pwd -P)/$(basename "$SPEC_FILE")" || {
-  echo "Error: cannot resolve path: $SPEC_FILE"
+# Validate: no path traversal
+case "$SPEC_FILE" in
+  *"/../"*|*"/.." ) echo "Error: path traversal detected in: $SPEC_FILE"; exit 1 ;;
+esac
+
+# Resolve to absolute path
+SPEC_DIR="$(cd "$(dirname "$SPEC_FILE")" 2>/dev/null && pwd -P)" || {
+  echo "Error: cannot resolve directory: $SPEC_FILE"
   exit 1
 }
+SPEC_PATH="$SPEC_DIR/$(basename "$SPEC_FILE")"
 
 [ -f "$SPEC_PATH" ] || { echo "Error: file not found: $SPEC_FILE"; exit 1; }
+[ -r "$SPEC_PATH" ] || { echo "Error: file not readable: $SPEC_FILE"; exit 1; }
 
 # Validate file extension
 case "${SPEC_PATH##*.}" in
@@ -39,29 +47,37 @@ file_type=$(file -b "$SPEC_PATH" 2>/dev/null || echo "unknown")
 echo "File type: $file_type"
 echo ""
 
-# Validate JSON/YAML format safely using python3 (no eval)
+# Validate JSON/YAML format safely using python3 (no eval, no injection)
 if command -v python3 &>/dev/null; then
   python3 -c "
-import json, yaml, sys
+import json, sys
 try:
-    with open('$SPEC_PATH') as f:
-        if '$SPEC_PATH'.endswith('.json'):
-            data = json.load(f)
-            print('✅ Valid JSON format')
-        else:
+    # Try JSON first
+    with open(sys.argv[1]) as f:
+        data = json.load(f)
+    print('✅ Valid JSON format')
+except (json.JSONDecodeError, UnicodeDecodeError):
+    # Try YAML
+    try:
+        import yaml
+        with open(sys.argv[1]) as f:
             data = yaml.safe_load(f)
-            print('✅ Valid YAML format')
-    info = data.get('info', {})
-    print()
-    print('=== API Info ===')
-    print('Title:     ' + info.get('title', 'N/A'))
-    print('Version:   ' + info.get('version', 'N/A'))
-    paths = data.get('paths', {})
-    print('Endpoints: ' + str(len(paths)))
-except Exception as e:
-    print('❌ Validation failed: ' + str(e))
-    sys.exit(1)
-" 2>&1 || echo "⚠️  Install PyYAML for YAML validation: pip install pyyaml"
+        print('✅ Valid YAML format')
+    except ImportError:
+        print('⚠️  PyYAML not installed. Install: pip install pyyaml')
+        sys.exit(0)
+    except Exception as e:
+        print('❌ YAML validation failed: ' + str(e))
+        sys.exit(1)
+
+info = data.get('info', {})
+print()
+print('=== API Info ===')
+print('Title:     ' + info.get('title', 'N/A'))
+print('Version:   ' + info.get('version', 'N/A'))
+paths = data.get('paths', {})
+print('Endpoints: ' + str(len(paths)))
+" "$SPEC_PATH" 2>&1
 else
   echo "⚠️  Install python3 for format validation"
 fi

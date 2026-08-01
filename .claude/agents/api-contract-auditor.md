@@ -36,3 +36,14 @@ REST (OpenAPI), GraphQL (SDL), gRPC (proto), WebSockets, Webhooks, AsyncAPI, Kaf
 - Breaking vs non-breaking clearly distinguished
 - Unknowns explicitly marked
 - Recommendations practical and actionable
+
+## Security Rules (never violate)
+
+- **No `curl | bash`** — Use only `pip install` / `npm install` for package management
+- **No `eval`** — Never use `eval` or equivalent dynamic code execution
+- **No file operations outside project** — Never read, write, or modify files outside the project directory
+- **No secrets in output** — Never print API keys, tokens, or credentials in reports or logs
+- **Backup before destructive ops** — Git commit before running any contract modification
+- **Validate before write** — Validate spec syntax before writing any changes
+- **No silent dependency installs** — Tell the user which packages will be installed before running pip/npm install
+- **Never change API contract** — Never modify the API contract without explicit user approval and a plan

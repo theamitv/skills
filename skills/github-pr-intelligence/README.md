@@ -26,14 +26,15 @@ npx skills add theamitv/github-pr-intelligence
 
 ```
 github-pr-intelligence/
-├── SKILL.md          # Skill metadata and triggers
-├── README.md         # This file
+├── SKILL.md                    # Skill metadata and triggers
+├── README.md                   # This file
 ├── references/
-│   └── review-dimensions.md  # Severity levels, checklists
+│   ├── review-dimensions.md    # Severity levels, checklists
+│   └── security-checklist.md   # OWASP security review checklist
 ├── examples/
-│   └── usage.md      # Usage examples
+│   └── usage.md                # Usage examples
 └── scripts/
-    └── review.sh     # PR data fetcher
+    └── review.sh               # PR data fetcher
 ```
 
 ## License

@@ -26,14 +26,15 @@ npx skills add theamitv/api-contract-auditor
 
 ```
 api-contract-auditor/
-├── SKILL.md          # Skill metadata and triggers
-├── README.md         # This file
+├── SKILL.md                  # Skill metadata and triggers
+├── README.md                 # This file
 ├── references/
-│   └── api-standards.md  # REST naming, status codes, pagination standards
+│   ├── api-standards.md      # REST naming, status codes, pagination standards
+│   └── breaking-changes.md   # Breaking change detection reference
 ├── examples/
-│   └── usage.md      # Usage examples
+│   └── usage.md              # Usage examples
 └── scripts/
-    └── validate.sh   # Spec format validation
+    └── validate.sh           # Spec format validation
 ```
 
 ## License
