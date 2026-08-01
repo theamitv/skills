@@ -22,6 +22,14 @@ npx skills add theamitv/skills --skill express-to-nestjs-migrator
 /express-to-nestjs-migrator Migrate this Express app to NestJS
 ```
 
+## When It Won't Work
+
+- **No Express app** — Designed for Express.js applications. Other Node.js frameworks (Fastify, Hapi, Koa) need different migration paths.
+- **Heavy `req` mutation** — Express middleware that heavily mutates `req` objects may need custom Nest decorators to preserve behavior.
+- **Dynamic route registration** — Routes registered dynamically at runtime (not via decorators) need manual conversion.
+- **Express-specific middleware** — Some Express middleware (e.g., `express-session`, `passport`) has Nest equivalents but may need configuration adjustments.
+- **Full parity guarantee** — Nest's pipeline differs from Express's sequential middleware. Complex middleware chains may behave differently under edge cases.
+
 ## Structure
 
 ```

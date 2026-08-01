@@ -41,6 +41,14 @@ The skill will recommend an incremental approach using `@nestjs/platform-express
 
 The skill will diagnose whether the issue is related to middleware ordering or error handling patterns.
 
+## TypeScript Migration
+
+```
+Migrate Express to NestJS and add TypeScript
+```
+
+The skill will set up TypeScript config and convert route handlers to Nest controllers.
+
 ## Example Migration Output
 
 ### Phase 1 — Risk Summary
