@@ -42,6 +42,14 @@ The skill will flag the legacy lifecycle and design a proper hooks-based replace
 
 The skill will diagnose whether the bug is related to lifecycle timing and propose a hooks rewrite.
 
+## TypeScript Class Components
+
+```
+Convert this TypeScript class component to typed hooks
+```
+
+The skill will preserve TypeScript types and convert prop types to typed functional component patterns.
+
 ## Example Migration Output
 
 ### Phase 1 — Analysis

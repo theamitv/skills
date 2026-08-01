@@ -22,6 +22,14 @@ npx skills add theamitv/skills --skill react-class-to-hooks-migrator
 /react-class-to-hooks-migrator Convert this class component to hooks
 ```
 
+## When It Won't Work
+
+- **No class components** — Designed for React class component migration. Functional components don't need this skill.
+- **React Native** — Covers React DOM components. React Native class components may need additional handling for native lifecycle differences.
+- **Custom base classes** — Components extending custom base classes (not `React.Component`) need manual analysis of the base class behavior.
+- **Heavy `ref` usage** — Components with complex `ref` patterns (callback refs, ref forwarding) may need additional `forwardRef` wrapping.
+- **100% behavioral parity** — Hooks and class lifecycles have subtle differences (e.g., `componentDidUpdate` runs before paint, `useEffect` runs after). Verify behavior in edge cases.
+
 ## Structure
 
 ```
