@@ -23,6 +23,14 @@ npx skills add theamitv/enterprise-system-design
 /enterprise-system-design Design a URL shortener
 ```
 
+## When It Won't Work
+
+- **Implementation** — Produces design documents and architecture, not production code. Does not generate runnable applications.
+- **Exact cost estimates** — Capacity planning uses rough estimates (DAU, RPS, storage). Actual cloud costs depend on specific pricing and discounts.
+- **One-size-fits-all** — Designs are tailored to the specific requirements given. Vague requirements produce generic designs.
+- **Real-time collaboration** — Single-designer output. Does not support multi-person architecture discussions or whiteboarding.
+- **Certification** — Does not provide certified architecture reviews or compliance audits. Use for design exploration and interview prep.
+
 ## Structure
 
 ```
