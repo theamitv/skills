@@ -2,17 +2,15 @@
 
 > FinOps advisor — cloud cost analysis, K8s optimization, rightsizing, governance, forecasting.
 
-Analyze cloud infrastructure spend across AWS, Azure, GCP, and K8s. Identify waste, recommend optimizations, and build cost governance.
+Analyze, optimize, and govern cloud infrastructure costs across AWS, GCP, and Azure. Rightsize resources, eliminate waste, and implement FinOps best practices.
 
 ## What It Does
 
-- **Compute Optimization** — EC2, ECS, EKS, Lambda, spot, reserved instances, rightsizing
-- **K8s Optimization** — Requests/limits, pod density, HPA/VPA, node pools, cluster fragmentation
-- **Storage** — S3/Blob/Cloud Storage tiers, lifecycle, EBS, snapshots, unused volumes
-- **Database** — RDS, Aurora, DynamoDB, Cloud SQL — instance size, replicas, reserved capacity
-- **Network** — Data transfer, NAT gateway, LB, CDN, inter-region traffic
-- **AI/ML** — GPU utilization, inference endpoints, vector DB, idle GPUs
-- **Governance** — Tagging, budgets, chargeback, automation
+- **Cost Analysis** — Spend breakdown by service, region, account, tag. Anomaly detection and trend analysis.
+- **Rightsizing** — EC2, RDS, ECS, Lambda memory, K8s resource requests/limits optimization.
+- **Storage Optimization** — S3 lifecycle policies, EBS snapshots, Glacier tiering, unused volume detection.
+- **Kubernetes** — Cluster rightsizing, node pool optimization, spot instance analysis, resource waste detection.
+- **Governance** — Budget alerts, cost allocation tags, reserved instance coverage, FinOps maturity assessment.
 
 ## Quick Start
 
@@ -21,21 +19,29 @@ Analyze cloud infrastructure spend across AWS, Azure, GCP, and K8s. Identify was
 npx skills add theamitv/cloud-cost-optimizer
 
 # Use in Claude Code
-/cloud-cost-optimizer Analyze AWS costs
+/cloud-cost-optimizer Analyze AWS costs for the last 30 days
 ```
+
+## When It Won't Work
+
+- **No cost data access** — Requires cloud provider cost exports (AWS CUR, GCP Billing, Azure Cost Management) or a CSV export. Cannot access live billing APIs directly.
+- **Real-time costs** — Cloud billing data has a 24-48 hour delay. Analysis is based on completed billing periods, not real-time spend.
+- **Multi-cloud aggregation** — Analyzes each provider separately. Does not auto-merge multi-cloud bills into a single view.
+- **Commitment purchases** — Does not purchase reserved instances or savings plans. Provides recommendations only.
+- **Custom pricing** — Works with standard on-demand and reserved pricing. Enterprise discount agreements and private offers are not reflected.
 
 ## Structure
 
 ```
 cloud-cost-optimizer/
-├── SKILL.md          # Skill metadata and triggers
-├── README.md         # This file
+├── SKILL.md              # Skill metadata and triggers
+├── README.md             # This file
 ├── references/
-│   └── savings-strategies.md  # Quick wins and strategic savings
+│   └── savings-strategies.md  # Cost optimization patterns
 ├── examples/
-│   └── usage.md      # Usage examples
+│   └── usage.md          # Usage examples
 └── scripts/
-    └── analyze-costs.sh  # Cloud cost data collection
+    └── analyze-costs.sh  # Cost data analysis script
 ```
 
 ## License
