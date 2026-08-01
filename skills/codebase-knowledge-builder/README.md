@@ -23,6 +23,14 @@ npx skills add theamitv/codebase-knowledge-builder
 /codebase-knowledge-builder Explain this repository
 ```
 
+## When It Won't Work
+
+- **Binary-only repos** — Analyzes source code only. Pre-compiled binaries, obfuscated code, or minified assets cannot be meaningfully analyzed.
+- **No git history** — Works best with git history for change patterns and ownership. A single snapshot limits depth of analysis.
+- **Extremely large monorepos** — May need focused scoping (specific modules or services) to stay within context limits.
+- **Proprietary languages** — Supports mainstream languages. Rare or esoteric languages may have limited pattern detection.
+- **External services** — Cannot analyze external service code, private packages, or dependencies without source access.
+
 ## Structure
 
 ```
