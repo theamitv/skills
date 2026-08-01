@@ -42,6 +42,14 @@ Our queries return different results after the Django upgrade
 
 The skill will identify ORM behavior changes for the specific version jump and verify against real data.
 
+## URL Pattern Migration
+
+```
+Migrate from url() to path() in Django URLs
+```
+
+The skill will convert `url()` patterns to `path()` and `re_path()` equivalents.
+
 ## Example Migration Output
 
 ### Phase 1 — Risk Audit

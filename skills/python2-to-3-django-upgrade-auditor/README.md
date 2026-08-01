@@ -23,6 +23,14 @@ npx skills add theamitv/skills --skill python2-to-3-django-upgrade-auditor
 /python2-to-3-django-upgrade-auditor Audit this Django app for Python 3 migration
 ```
 
+## When It Won't Work
+
+- **No Python/Django code** — Designed for Python 2 or Django upgrade migration. Other languages or frameworks are not supported.
+- **Automated tool replacement** — Does not replace `2to3` or `django-upgrade`. Use those for syntax conversion; this skill handles the semantic audit and planning.
+- **Third-party package compatibility** — Flags known breaking changes but cannot test every third-party package for compatibility with the target version.
+- **Runtime behavior** — Audits code statically. Some string/bytes issues only surface at runtime with specific input data.
+- **Full test coverage** — Cannot generate tests for every edge case. Focuses on high-risk areas (I/O, serialization, ORM).
+
 ## Structure
 
 ```
