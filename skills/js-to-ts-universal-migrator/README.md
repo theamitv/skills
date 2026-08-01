@@ -23,6 +23,22 @@ npx skills add theamitv/skills --skill js-to-ts-universal-migrator
 /js-to-ts-universal-migrator Migrate this React app to TypeScript
 ```
 
+## Which Skill Should I Use?
+
+This repo has two JS→TS migration skills. Here's how they differ:
+
+| | **js-to-ts-universal-migrator** (this one) | **js-to-ts-incremental-migrator** |
+|---|---|---|
+| **Best for** | Framework-heavy projects (React, Angular, Vue, Node) where framework-specific typing patterns matter | Any JS codebase where you want a framework-agnostic, incremental approach |
+| **Phase 0 — Identify** | ✅ Detects project type and branches strategy (React HOCs, Angular DI, Vue mixins, Node module system) | ❌ No framework detection — treats all JS the same |
+| **Framework patterns** | HOC generics, PropTypes→interfaces, `defineComponent`, DI typing, CJS/ESM handling, Express route typing | Generic JS→TS patterns only (JSDoc, dynamic objects, callbacks) |
+| **When to pick** | You know your project uses React/Angular/Vue/Node and want framework-aware typing | You want a lightweight, framework-agnostic migration or have a vanilla JS / library project |
+| **Migration style** | 4-phase (Identify → Think → Plan → Execute) | 3-phase (Think → Plan → Execute) |
+
+**Pick this skill** if you're migrating a React app with PropTypes and HOCs, a Vue 2 project with mixins, an Angular service layer, or a Node/Express backend with mixed CJS/ESM modules.
+
+**Pick the incremental migrator** if you have a vanilla JS library, a bundler-agnostic utility package, or simply prefer a framework-agnostic approach without the Identify phase.
+
 ## When It Won't Work
 
 - **No JS codebase** — Designed for JavaScript-to-TypeScript migration. Greenfield TypeScript projects don't need this skill.
