@@ -22,6 +22,14 @@ npx skills add theamitv/api-contract-auditor
 /api-contract-auditor Review this OpenAPI spec
 ```
 
+## When It Won't Work
+
+- **No contract file** — Requires an OpenAPI, GraphQL SDL, proto, or AsyncAPI spec to analyze. Cannot review APIs from code alone.
+- **Runtime behavior** — Validates contract structure, not runtime behavior. Cannot detect logic bugs, performance issues in production, or actual auth bypasses.
+- **Custom formats** — Works with standard formats only. Proprietary or undocumented contract formats are not supported.
+- **Implementation drift** — Cannot verify that the implementation matches the spec unless both are provided for comparison.
+- **Auto-fixing** — Identifies issues and suggests fixes but does not auto-modify your spec files without approval.
+
 ## Structure
 
 ```
