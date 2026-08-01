@@ -22,6 +22,14 @@ npx skills add theamitv/production-incident-investigator
 /production-incident-investigator Investigate today's production outage
 ```
 
+## When It Won't Work
+
+- **No access to systems** — Requires logs, metrics, traces, or deployment history to investigate. Cannot investigate without evidence.
+- **Real-time investigation** — Works with evidence you provide. Does not connect to live monitoring systems or pull data automatically.
+- **On-call handoff** — Produces investigation reports and RCAs. Does not replace on-call rotation, paging, or incident response workflows.
+- **Security forensics** — Focuses on reliability incidents. Security incident response and digital forensics require specialized tools.
+- **Post-incident only** — Investigates after the fact. Does not prevent incidents or provide real-time alerting.
+
 ## Structure
 
 ```
