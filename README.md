@@ -1,6 +1,6 @@
 # AI-Powered Development Skills for Claude Code
 
-A collection of 22 specialized skills for Claude Code covering trading, API governance, cloud cost optimization, codebase analysis, database performance, system design, PR review, incident investigation, project updates, CRA→Vite migration, Express→NestJS migration, JS→TS migration, REST→GraphQL derivation, React class→hooks migration, Redux→Zustand migration, Webpack→Vite migration, monolith boundary analysis, Mongoose→Prisma/Drizzle migration, Python 2→3 / Django upgrade, SaaS blueprinting, SaaS code generation, and security compliance.
+A collection of 23 specialized skills for Claude Code covering trading, API governance, cloud cost optimization, codebase analysis, database performance, system design, PR review, incident investigation, project updates, CRA→Vite migration, Express→NestJS migration, JS→TS migration (incremental + universal), REST→GraphQL derivation, React class→hooks migration, Redux→Zustand migration, Webpack→Vite migration, monolith boundary analysis, Mongoose→Prisma/Drizzle migration, Python 2→3 / Django upgrade, SaaS blueprinting, SaaS code generation, and security compliance.
 
 ## Skills
 
@@ -20,6 +20,7 @@ A collection of 22 specialized skills for Claude Code covering trading, API gove
 | [cra-to-vite-migrator](./skills/cra-to-vite-migrator/) | CRA → Vite migration — env vars, SVG imports, CRACO overrides, tests, rollback planning |
 | [express-to-nestjs-migrator](./skills/express-to-nestjs-migrator/) | Express → NestJS migration — middleware mapping, DI, route conversion, API contract safety |
 | [js-to-ts-incremental-migrator](./skills/js-to-ts-incremental-migrator/) | JS → TS incremental migration — priority analysis, JSDoc conversion, phased strictness |
+| [js-to-ts-universal-migrator](./skills/js-to-ts-universal-migrator/) | JS → TS universal migration — React, Angular, Vue, Node, vanilla JS with framework-specific patterns |
 | [rest-to-graphql-deriver](./skills/rest-to-graphql-deriver/) | REST → GraphQL schema derivation — N+1-safe resolvers, DataLoader, auth preservation |
 | [react-class-to-hooks-migrator](./skills/react-class-to-hooks-migrator/) | React class → hooks migration — lifecycle mapping, stale closure prevention, useRef |
 | [redux-to-zustand-migrator](./skills/redux-to-zustand-migrator/) | Redux → Zustand/Context migration — store mapping, middleware, normalized data, memoization |
@@ -46,6 +47,7 @@ npx skills add theamitv/skills --skill enterprise-system-design
 npx skills add theamitv/skills --skill express-to-nestjs-migrator
 npx skills add theamitv/skills --skill github-pr-intelligence
 npx skills add theamitv/skills --skill js-to-ts-incremental-migrator
+npx skills add theamitv/skills --skill js-to-ts-universal-migrator
 npx skills add theamitv/skills --skill mongoose-to-prisma-drizzle-migrator
 npx skills add theamitv/skills --skill monolith-boundary-finder
 npx skills add theamitv/skills --skill monthly-project-update
@@ -92,6 +94,7 @@ repo-root/
 │   ├── cra-to-vite-migrator/
 │   ├── express-to-nestjs-migrator/
 │   ├── js-to-ts-incremental-migrator/
+│   ├── js-to-ts-universal-migrator/
 │   ├── rest-to-graphql-deriver/
 │   ├── react-class-to-hooks-migrator/
 │   ├── redux-to-zustand-migrator/
