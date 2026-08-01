@@ -24,6 +24,14 @@ npx skills add theamitv/security-compliance-auditor
 /security-compliance-auditor Review application security
 ```
 
+## When It Won't Work
+
+- **Live penetration testing** — Performs static analysis and design review. Does not execute dynamic scans, fuzzing, or live penetration tests.
+- **Code execution** — Reviews code and configuration for vulnerabilities. Does not run or execute the application.
+- **Certification audits** — Provides readiness assessments and gap analysis but cannot certify compliance. Certification requires an accredited auditor.
+- **Source code required** — Requires access to source code, configuration files, and infrastructure definitions. Cannot review closed-source or binary-only systems.
+- **Real-time monitoring** — Does not set up or replace security monitoring tools (SIEM, WAF, IDS/IPS).
+
 ## Structure
 
 ```
