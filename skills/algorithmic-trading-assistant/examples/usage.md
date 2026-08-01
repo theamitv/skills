@@ -13,29 +13,32 @@ Create trend-following strategy for forex
 ## Analysis
 
 ```
-Backtest this strategy
-Explain strategy performance
-Optimize parameters
-Analyze drawdown
-Analyze losing trades
-Analyze winning trades
+Backtest this strategy on 5 years of data
+Explain strategy performance with Sharpe ratio
+Optimize parameters for max risk-adjusted return
+Analyze drawdown during 2020 crash
+Analyze losing trades for pattern detection
+Run Monte Carlo simulation on this strategy
 ```
 
 ## Risk Management
 
 ```
-Generate risk report
-Generate portfolio analysis
-Create position sizing model
+Generate risk report with VaR and CVaR
+Generate portfolio analysis across 3 strategies
+Create position sizing model with Kelly criterion
+Set max drawdown limit to 15%
+Add emergency stop-loss rules
 ```
 
 ## Deployment
 
 ```
-Paper trade this strategy
-Generate deployment checklist
-Review broker integration
-Generate HTML dashboard
+Paper trade this strategy for 30 days
+Generate deployment checklist for live trading
+Review broker integration for Zerodha
+Generate HTML dashboard for monitoring
+Set up trade journal and logging
 ```
 
 ## Example Files

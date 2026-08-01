@@ -21,6 +21,14 @@ npx skills add theamitv/algorithmic-trading-assistant
 /algorithmic-trading-assistant Create a trading strategy for Nifty 50
 ```
 
+## When It Won't Work
+
+- **Real-time execution** — This is a research and design assistant, not a live trading engine. It generates strategies and deployment plans but does not execute trades.
+- **Guaranteed profits** — No strategy can guarantee returns. All backtest results are historical simulations and may not predict future performance.
+- **Regulatory compliance** — Does not provide legal or regulatory advice. Consult a compliance professional before deploying.
+- **Market data feeds** — Does not connect to live market data APIs. You provide the data or use the bundled scripts for analysis.
+- **High-frequency trading** — Not designed for sub-second latency strategies or direct market access.
+
 ## Structure
 
 ```
