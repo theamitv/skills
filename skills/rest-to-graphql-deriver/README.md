@@ -22,6 +22,14 @@ npx skills add theamitv/skills --skill rest-to-graphql-deriver
 /rest-to-graphql-deriver Derive a GraphQL schema from my REST API
 ```
 
+## When It Won't Work
+
+- **No REST API** — Designed for adding GraphQL to an existing REST API. Greenfield GraphQL projects don't need this skill.
+- **No endpoint access** — Requires access to route definitions, response shapes, or API documentation to catalog endpoints.
+- **Complex auth flows** — REST APIs with deeply nested or context-dependent auth may need manual resolver-level auth wiring.
+- **File upload endpoints** — GraphQL handles file uploads differently (multipart request spec). REST file upload endpoints need special handling.
+- **Full REST replacement** — This skill derives a GraphQL layer. Existing REST endpoints remain unchanged unless you explicitly deprecate them.
+
 ## Structure
 
 ```

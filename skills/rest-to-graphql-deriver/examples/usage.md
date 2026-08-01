@@ -42,6 +42,14 @@ Design a GraphQL schema based on my REST response shapes
 
 The skill will derive type definitions from actual endpoint response shapes.
 
+## DataLoader Setup
+
+```
+Set up DataLoader for my GraphQL resolvers
+```
+
+The skill will create DataLoader instances for each shared entity with batching and caching.
+
 ## Example Migration Output
 
 ### Phase 1 — Endpoint Catalog
