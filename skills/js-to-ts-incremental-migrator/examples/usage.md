@@ -45,6 +45,15 @@ Let .js and .ts files coexist during migration
 
 The skill will set up `allowJs: true` and plan a phased strictness rollout.
 
+## Strictness Tuning
+
+```
+Enable strict mode gradually
+Turn on strictNullChecks for my project
+```
+
+The skill will enable strictness flags one at a time and fix the resulting errors.
+
 ## Example Migration Output
 
 ### Phase 1 — Priority Analysis

@@ -22,6 +22,14 @@ npx skills add theamitv/skills --skill js-to-ts-incremental-migrator
 /js-to-ts-incremental-migrator Add TypeScript to this project
 ```
 
+## When It Won't Work
+
+- **No JS codebase** — Designed for JavaScript-to-TypeScript migration. Greenfield TypeScript projects don't need this skill.
+- **Heavy dynamic patterns** — Files with extensive `eval`, dynamic property access, or metaprogramming may need redesign before typing.
+- **Third-party JS without types** — Libraries without TypeScript definitions may need manual `.d.ts` files or `@types/` packages.
+- **Big-bang requirement** — If your team requires a single PR for the full migration, this incremental approach won't fit.
+- **100% type safety guarantee** — Some `any` and `@ts-expect-error` are expected during incremental migration. Full strictness is a gradual process.
+
 ## Structure
 
 ```
