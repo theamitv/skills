@@ -3,49 +3,49 @@
 ## Database Analysis
 
 ```
-Analyze database
-Review schema
-Review data model
-Review migrations
+Analyze database performance for slow queries
+Review schema design for scalability
+Review data model for normalization issues
+Review migration plan for zero-downtime
 ```
 
 ## Query Optimization
 
 ```
-Optimize SQL
-Optimize MongoDB
-Review DynamoDB
-Analyze execution plan
-Explain slow query
+Optimize this slow SQL query
+Optimize MongoDB aggregation pipeline
+Review DynamoDB query patterns
+Analyze execution plan for full table scans
+Explain why this query is slow
 ```
 
 ## Indexing
 
 ```
-Suggest indexes
-Review indexing strategy
+Suggest indexes for this query pattern
+Review indexing strategy for write-heavy workload
+Find unused or duplicate indexes
+Design covering index for this report query
 ```
 
 ## Architecture
 
 ```
-Review transactions
-Review replication
-Review partitioning
-Review sharding
-Review caching
-Review connection pooling
+Review transaction isolation levels
+Review replication lag and consistency
+Review partitioning strategy for time-series data
+Review sharding key design
+Review caching strategy (Redis, Memcached)
+Review connection pooling configuration
 ```
 
 ## Operations
 
 ```
-Review storage
-Review backup strategy
-Review disaster recovery
-Review capacity planning
+Review storage growth and capacity planning
+Review backup strategy and RPO/RTO
+Review disaster recovery plan
 Generate optimization roadmap
-Generate HTML dashboard
-Generate DBA report
-Generate executive summary
+Generate DBA report with recommendations
+Generate HTML dashboard for database health
 ```

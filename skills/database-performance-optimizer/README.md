@@ -23,6 +23,14 @@ npx skills add theamitv/database-performance-optimizer
 /database-performance-optimizer Analyze database performance
 ```
 
+## When It Won't Work
+
+- **No query access** — Requires actual queries, schema DDL, or execution plans to analyze. Cannot optimize blindly without workload context.
+- **Production data** — Does not connect to live databases. Provide anonymized schemas, slow query logs, or EXPLAIN plans.
+- **Vendor-specific features** — Covers PostgreSQL, MySQL, MongoDB, DynamoDB, SQL Server, Oracle at the general level. Deep vendor-specific features (e.g., Oracle RAC, SQL Server Always On) may need additional context.
+- **Hardware tuning** — Focuses on query/schema/index level optimization. Storage hardware, kernel parameters, and filesystem tuning are out of scope.
+- **Real-time monitoring** — Provides recommendations based on static analysis. Does not set up monitoring or alerting.
+
 ## Structure
 
 ```
