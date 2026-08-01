@@ -23,6 +23,14 @@ npx skills add theamitv/skills --skill mongoose-to-prisma-drizzle-migrator
 /mongoose-to-prisma-drizzle-migrator Migrate from Mongoose to Prisma
 ```
 
+## When It Won't Work
+
+- **No Mongoose schemas** — Designed for Mongoose-to-Prisma/Drizzle migration. Greenfield Prisma/Drizzle projects don't need this skill.
+- **Schema-less data loss** — Mongoose's `Mixed` type and schema-less flexibility don't map cleanly to Prisma/Drizzle. Every schema-less field needs an explicit decision (Json column, typed field, or dropped).
+- **Complex aggregation pipelines** — Mongoose aggregation pipelines with `$lookup`, `$unwind`, and `$group` may need significant redesign for SQL equivalents.
+- **MongoDB-specific features** — MongoDB features like TTL indexes, geospatial queries, and change streams have different equivalents in relational databases.
+- **Full data parity** — Data migration from MongoDB to a relational database may reveal data integrity issues (orphaned references, inconsistent shapes) that need manual cleanup.
+
 ## Structure
 
 ```

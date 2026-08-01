@@ -41,6 +41,14 @@ We use .populate() extensively — will that work in Prisma?
 
 The skill will catalog every populate call and flag data-integrity risks.
 
+## Dual-Write Strategy
+
+```
+Set up dual-write for safe migration from Mongoose to Prisma
+```
+
+The skill will implement a dual-write pattern with verification before cutover.
+
 ## Example Migration Output
 
 ### Phase 1 — Schema Catalog
