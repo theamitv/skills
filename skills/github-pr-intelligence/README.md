@@ -22,6 +22,15 @@ npx skills add theamitv/github-pr-intelligence
 /github-pr-intelligence Review PR #124
 ```
 
+## When It Won't Work
+
+- **No `gh` CLI** — Requires GitHub CLI (`gh`) installed and authenticated to fetch PR metadata and diffs.
+- **Non-GitHub repos** — Designed for GitHub PRs. GitLab MRs and Bitbucket PRs are not directly supported.
+- **Private repos without access** — Requires read access to the repository. Cannot review PRs in repos you don't have access to.
+- **Binary-only diffs** — Cannot review image, binary, or minified file changes. Source code diffs only.
+- **Auto-approve** — Provides recommendations and findings. Does not auto-approve, merge, or apply changes.
+- **Large PRs** — Very large diffs (500+ files) may need focused scoping to stay within context limits.
+
 ## Structure
 
 ```
