@@ -23,6 +23,14 @@ npx skills add theamitv/skills --skill redux-to-zustand-migrator
 /redux-to-zustand-migrator Migrate from Redux to Zustand
 ```
 
+## When It Won't Work
+
+- **No Redux store** — Designed for Redux-to-Zustand/Context migration. Greenfield state management doesn't need this skill.
+- **Complex saga orchestrations** — Sagas with intricate `fork`/`race`/`spawn` patterns may need significant redesign. Simple `takeLatest`/`debounce` patterns map cleanly.
+- **Redux DevTools-dependent debugging** — Zustand has DevTools support via middleware but the debugging experience differs from Redux DevTools.
+- **Middleware-heavy stores** — Stores with 5+ custom middleware chains may need phased migration to avoid behavioral gaps.
+- **Full behavioral parity** — Zustand and Redux have different subscription models. Verify re-render behavior in performance-critical components.
+
 ## Structure
 
 ```

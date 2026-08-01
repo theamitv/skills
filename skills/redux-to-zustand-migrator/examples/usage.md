@@ -41,6 +41,14 @@ Our thunks read from multiple slices — how do we handle that in Zustand?
 
 The skill will map cross-slice reads to `getState()` across multiple Zustand stores.
 
+## React Context Alternative
+
+```
+Migrate to React Context instead of Zustand
+```
+
+The skill will evaluate whether Context is appropriate (low churn, few consumers) and plan accordingly.
+
 ## Example Migration Output
 
 ### Phase 1 — Store Inventory
