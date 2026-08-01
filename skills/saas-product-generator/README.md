@@ -24,6 +24,14 @@ npx skills add theamitv/saas-product-generator
 /saas-product-generator Create a SaaS for gym management
 ```
 
+## When It Won't Work
+
+- **Production code** — Generates blueprints, PRDs, and architecture documents, not working code. Use the SaaS Code Generator skill for implementation.
+- **Market validation** — Provides competitive analysis and market research frameworks but does not run actual user surveys or A/B tests.
+- **Financial guarantees** — Revenue forecasts and break-even analysis are estimates based on assumptions. Actual results will vary.
+- **Legal compliance** — Does not provide legal advice. Compliance checklists are informational; consult a lawyer for binding requirements.
+- **One-size-fits-all** — Output quality depends on the specificity of your input. Vague ideas produce generic blueprints.
+
 ## Structure
 
 ```
