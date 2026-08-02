@@ -1,6 +1,6 @@
 # AI-Powered Development Skills for Claude Code
 
-A collection of 23 specialized skills for Claude Code covering trading, API governance, cloud cost optimization, codebase analysis, database performance, system design, PR review, incident investigation, project updates, CRA→Vite migration, Express→NestJS migration, JS→TS migration (incremental + universal), REST→GraphQL derivation, React class→hooks migration, Redux→Zustand migration, Webpack→Vite migration, monolith boundary analysis, Mongoose→Prisma/Drizzle migration, Python 2→3 / Django upgrade, SaaS blueprinting, SaaS code generation, and security compliance.
+A collection of 26 specialized skills for Claude Code covering trading, API governance, cloud cost optimization, codebase analysis, database performance, system design, PR review, incident investigation, project updates, CRA→Vite migration, Express→NestJS migration, JS→TS migration (incremental + universal), REST→GraphQL derivation, React class→hooks migration, Redux→Zustand migration, Webpack→Vite migration, monolith boundary analysis, Mongoose→Prisma/Drizzle migration, Python 2→3 / Django upgrade, SaaS blueprinting, SaaS code generation, security compliance, flaky test diagnosis, Confluence documentation generation, and AI code walkthrough.
 
 ## Skills
 
@@ -10,6 +10,7 @@ A collection of 23 specialized skills for Claude Code covering trading, API gove
 | [api-contract-auditor](./skills/api-contract-auditor/) | API governance — contract validation, breaking change detection, security |
 | [cloud-cost-optimizer](./skills/cloud-cost-optimizer/) | FinOps advisor — cloud cost analysis, K8s optimization, rightsizing |
 | [codebase-knowledge-builder](./skills/codebase-knowledge-builder/) | Repository knowledge — architecture, code flow, dependency graph, onboarding |
+| [confluence-docs-generator](./skills/confluence-docs-generator/) | Confluence-ready docs from any codebase — architecture, API reference, user guide |
 | [database-performance-optimizer](./skills/database-performance-optimizer/) | Database performance — schema review, query optimization, indexing |
 | [enterprise-system-design](./skills/enterprise-system-design/) | System design — HLD, LLD, capacity planning, FAANG interview prep |
 | [github-pr-intelligence](./skills/github-pr-intelligence/) | PR review — architecture, security, performance, testing, deployment risk |
@@ -29,6 +30,8 @@ A collection of 23 specialized skills for Claude Code covering trading, API gove
 | [mongoose-to-prisma-drizzle-migrator](./skills/mongoose-to-prisma-drizzle-migrator/) | Mongoose → Prisma/Drizzle migration — schema mapping, populate conversion, dual-write strategy |
 | [python2-to-3-django-upgrade-auditor](./skills/python2-to-3-django-upgrade-auditor/) | Python 2→3 / Django version bump — string/bytes audit, version-specific breaking changes, ORM verification |
 | [security-compliance-auditor](./skills/security-compliance-auditor/) | Security audit — app, cloud, K8s, CI/CD, SOC2, ISO27001, GDPR, HIPAA |
+| [flaky-test-diagnostician](./skills/flaky-test-diagnostician/) | Flaky test diagnosis — rerun, isolate, classify six root causes, actionable fixes |
+| [ai-code-walkthrough](./skills/ai-code-walkthrough/) | AI code walkthrough — line-by-line explanation, assumption surfacing, pre-commit review |
 
 ## Install
 
@@ -41,6 +44,7 @@ npx skills add theamitv/skills --skill algorithmic-trading-assistant
 npx skills add theamitv/skills --skill api-contract-auditor
 npx skills add theamitv/skills --skill cloud-cost-optimizer
 npx skills add theamitv/skills --skill codebase-knowledge-builder
+npx skills add theamitv/skills --skill confluence-docs-generator
 npx skills add theamitv/skills --skill cra-to-vite-migrator
 npx skills add theamitv/skills --skill database-performance-optimizer
 npx skills add theamitv/skills --skill enterprise-system-design
@@ -59,6 +63,8 @@ npx skills add theamitv/skills --skill rest-to-graphql-deriver
 npx skills add theamitv/skills --skill saas-code-generator
 npx skills add theamitv/skills --skill saas-product-generator
 npx skills add theamitv/skills --skill security-compliance-auditor
+npx skills add theamitv/skills --skill flaky-test-diagnostician
+npx skills add theamitv/skills --skill ai-code-walkthrough
 npx skills add theamitv/skills --skill webpack-to-vite-config-translator
 
 # List available skills
@@ -76,42 +82,39 @@ repo-root/
 │   └── skills/          # Symlinks to skill directories
 ├── skills/
 │   ├── algorithmic-trading-assistant/
-│   │   ├── SKILL.md     # Skill metadata and triggers
-│   │   ├── README.md
-│   │   ├── references/  # Reference documentation
-│   │   ├── examples/    # Usage examples
-│   │   └── scripts/     # Helper scripts (secure, validated)
 │   ├── api-contract-auditor/
 │   ├── cloud-cost-optimizer/
 │   ├── codebase-knowledge-builder/
+│   ├── confluence-docs-generator/
+│   ├── cra-to-vite-migrator/
 │   ├── database-performance-optimizer/
 │   ├── enterprise-system-design/
-│   ├── github-pr-intelligence/
-│   ├── monthly-project-update/
-│   ├── production-incident-investigator/
-│   ├── saas-product-generator/
-│   ├── saas-code-generator/
-│   ├── cra-to-vite-migrator/
 │   ├── express-to-nestjs-migrator/
+│   ├── github-pr-intelligence/
 │   ├── js-to-ts-incremental-migrator/
 │   ├── js-to-ts-universal-migrator/
-│   ├── rest-to-graphql-deriver/
+│   ├── mongoose-to-prisma-drizzle-migrator/
+│   ├── monolith-boundary-finder/
+│   ├── monthly-project-update/
+│   ├── production-incident-investigator/
+│   ├── python2-to-3-django-upgrade-auditor/
 │   ├── react-class-to-hooks-migrator/
 │   ├── redux-to-zustand-migrator/
-│   ├── webpack-to-vite-config-translator/
-│   ├── monolith-boundary-finder/
-│   ├── mongoose-to-prisma-drizzle-migrator/
-│   ├── python2-to-3-django-upgrade-auditor/
-│   └── security-compliance-auditor/
+│   ├── rest-to-graphql-deriver/
+│   ├── saas-code-generator/
+│   ├── saas-product-generator/
+│   ├── security-compliance-auditor/
+│   ├── ai-code-walkthrough/
+│   ├── flaky-test-diagnostician/
+│   └── webpack-to-vite-config-translator/
 ```
 
 ## Each Skill Contains
 
 - **SKILL.md** — Frontmatter with `name` and `description` (used by `npx skills` for discovery)
-- **README.md** — Overview, install, and usage instructions
+- **scripts/** — Helper scripts (pure Python stdlib, no pip dependencies)
 - **references/** — Domain-specific reference documentation
 - **examples/** — Usage examples and patterns
-- **scripts/** — Helper shell scripts (input-validated, injection-safe)
 
 ## Requirements
 
